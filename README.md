@@ -34,6 +34,10 @@ git rebase <branch>
 ### Aplicação
 git rebase main
 
+### Referência
+https://git-scm.com/docs/git-rebase
+documentação da aula de Git parte 2, PDF disponibilizado no Tech Up Challenge
+
 <br>
 
 # git cherry pick
