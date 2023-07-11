@@ -205,8 +205,6 @@ Após um tempo já desenvolvendo/construindo um recurso em uma ramificação, o 
 
 6. esc + :wq
 
-Fim!
-
 #### Referências:
 #### [Documentação Git](https://git-scm.com/docs/git-rebase)
 #### [Gitlab](https://docs.gitlab.com/ee/user/project/merge_requests/squash_and_merge.html)
