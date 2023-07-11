@@ -61,7 +61,7 @@ documentação da aula de Git parte 2, PDF disponibilizado no Tech Up Challenge
 ```
  git cherry-pick <commit>
  ```
- * <commit>: O hash do commit que você deseja aplicar.
+ * commit: O hash do commit que você deseja aplicar.
 
 ```
  git cherry-pick [--edit] [-n] [-m <número-pai>] [-s] [-x] [--ff]
@@ -73,19 +73,31 @@ documentação da aula de Git parte 2, PDF disponibilizado no Tech Up Challenge
 
 ### Aplicação
 
-#### git cherry-pick master
-##### Aplique a alteração introduzida pelo commit na ponta do branch master e crie um novo commit com esta alteração.
+```
+ git cherry-pick master
+ ```
+* Aplique a alteração introduzida pelo commit na ponta do branch master e crie um novo commit com esta alteração.
 
-#### git cherry-pick ..master
-#### git cherry-pick ^HEAD master
-##### Aplique as alterações introduzidas por todos os commits que são ancestrais do master, mas não do HEAD para produzir novos commits.
+```
+git cherry-pick ..master
+```
+```
+git cherry-pick ^HEAD master
+```
+* Aplique as alterações introduzidas por todos os commits que são ancestrais do master, mas não do HEAD para produzir novos commits.
 
-#### git cherry-pick maint next ^master
-#### git cherry-pick maint master..next
-##### Aplique as alterações introduzidas por todos os commits que são ancestrais de maint ou next, mas não master ou qualquer um de seus ancestrais. Observe que o último não significa mainte tudo entre mastere next; especificamente, maintnão será usado se estiver incluído em master.
+```
+git cherry-pick maint next ^master
+```
+```
+git cherry-pick maint master..next
+```
+* Aplique as alterações introduzidas por todos os commits que são ancestrais de maint ou next, mas não master ou qualquer um de seus ancestrais. Observe que o último não significa mainte tudo entre mastere next; especificamente, maintnão será usado se estiver incluído em master.
 
-#### git rev-list --reverse master -- README | git cherry-pick -n --stdin
-##### Aplique as alterações introduzidas por todos os commits no branch master que tocou em README na árvore de trabalho e no índice, para que o resultado possa ser inspecionado e transformado em um único novo commit, se adequado.
+```
+git rev-list --reverse master -- README | git cherry-pick -n --stdin
+```
+* Aplique as alterações introduzidas por todos os commits no branch master que tocou em README na árvore de trabalho e no índice, para que o resultado possa ser inspecionado e transformado em um único novo commit, se adequado.
 
 ### Referência
 #### [Documentação Git](https://git-scm.com/docs/git-cherry-pick)
