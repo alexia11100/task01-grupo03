@@ -26,10 +26,17 @@
 # git rebase
 
 ### Funcionamento
+Tem a função de integrar dois branchs em um, refazendo o histórico de commits, movendo de uma ramificação para outro ponto de uma árvore.
 
 ### Sintaxe
+git rebase <branch>
 
 ### Aplicação
+git rebase main
+
+### Referência
+https://git-scm.com/docs/git-rebase
+documentação da aula de Git parte 2, PDF disponibilizado no Tech Up Challenge
 
 <br>
 
