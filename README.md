@@ -29,14 +29,17 @@
 Tem a função de integrar dois branchs em um, refazendo o histórico de commits, movendo de uma ramificação para outro ponto de uma árvore.
 
 ### Sintaxe
+```
 git rebase <branch>
+```
 
 ### Aplicação
+```
 git rebase main
+```
 
 ### Referência
-https://git-scm.com/docs/git-rebase
-documentação da aula de Git parte 2, PDF disponibilizado no Tech Up Challenge
+[PDF Tech Up Challenge pt.2](https://git-scm.com/docs/git-rebase)
 
 <br>
 
@@ -112,6 +115,7 @@ git rev-list --reverse master -- README | git cherry-pick -n --stdin
 
 
 #### Nota: git revert é utilizado para registrar alguns commits novos para reverter o efeito de alguns commits anteriores (geralmente apenas um com problema). 
+
 ### Sintaxe
 
 ```
@@ -155,27 +159,31 @@ Após um tempo já desenvolvendo/construindo um recurso em uma ramificação, o 
   - Histórico de commits.
   - Branchs.
 
-- ### Exemplo:
+- ### Exemplo com commits:
 
-  - #### Commits:
-    1. c98jo89
-    2. c7820cm
-    3. 8c1a12v
-    
-    <br> => 23ab609
+  - #### Antes:
+    ```
+     c98jo89
+     c7820cm
+     8c1a12v
+     ```
+  - #### Depois:
+    ``` 
+    23ab609
+    ```
 
 ### Sintaxe
  ```
- git rebase -i HEAD~{Quantidade}
+ git rebase -i HEAD~[QUANTIDADE]
  ```
 
+" rebase " Move commits para um novo commit base <br>
 
-| PARTE | FUNÇÃO |
-|:------|-------:|
-| rebase | Move commits para um novo commit base|
-| -i | Interativo, ou seja, trará um menú com opções que auxiliam na junção dos commits ou branchs |
-| HEAD~ | Referencia aos commits referentes ao atual |
-| {Quantidade} | Quantidades de commits anteriores em que serão juntados | 
+" -i "  Interativo, ou seja, trará um menú com opções que auxiliam na junção dos commits ou branchs  <br>
+
+" HEAD~ " Referencia aos commits referentes ao atual  <br>
+
+" [QUANTIDADE] "  Quantidades de commits anteriores em que serão juntados 
 
 ### Aplicação
 + Exemplos commits:
@@ -184,18 +192,23 @@ Após um tempo já desenvolvendo/construindo um recurso em uma ramificação, o 
 
 <br>
 
-1. ```git rebase -i HEAD~3```
+1. ```git rebase -i HEAD~2```
 
 2. ![Alt text](image.png)
 
-3. pick 28ddeb6 
+3. pick 28ddeb6 <br>
+  squash 28ddeb6
 
-4. squash 28ddeb6
+4. esc + :wq
 
-5. esc + :wq
+5. Editar mensagem da junção (OPCIONAL)
 
-6. Editar mensagem da junção (OPCIONAL)
-
-7. esc + :wq
+6. esc + :wq
 
 Fim!
+
+#### Referências:
+#### [Documentação Git](https://git-scm.com/docs/git-rebase)
+#### [Gitlab](https://docs.gitlab.com/ee/user/project/merge_requests/squash_and_merge.html)
+#### [Git-tower](https://www.git-tower.com/learn/git/faq/git-squash)
+
