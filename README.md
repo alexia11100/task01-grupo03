@@ -49,20 +49,25 @@
 
 #### Dado um ou mais commits já existentes, reverta as alterações introduzidas pelos patches relacionados e registre alguns novos commits que registram neles. Isso requer que a sua árvore de trabalho esteja limpa (nenhuma alteração a partir do commit HEAD).
 
+#### Nota: git revert é utilizado para registrar alguns commits novos para reverter o efeito de alguns commits anteriores (geralmente apenas um com problema). 
 ### Sintaxe
-#### git revert
+
+#### git revert "commit"​
+##### Commits que serão revertidos.
+
+#### git revert -e ou git revert --edit
+##### Com esta opção, o comando git revert permitirá a edição da mensagem do commit antes de fazer a reversão do commit. Esta é a predefinição caso execute o comando em um terminal.
+
+#### git revert --abort
+##### Cancele a operação e retorne a condição pré-sequência.
 
 ### Aplicação (Algumas opções)
+#### git revert HEAD~3
+##### Reverta as alterações informadas pelo quarto último commit no HEAD e crie um novo commit com as alterações revertidas.
 
-#### "commit"​
-#### Commits que serão revertidos.
+#### git revert -n master~5..master~2
+##### Reverta as alterações feitas pelos commits do quinto último commit no master (incluso) para o terceiro último commit no master (incluso), porém não crie nenhum commit com as alterações revertidas. A reversão altera apenas a árvore de trabalho e o índice.
 
-#### -e
-#### --edit
-#### Com esta opção, o comando git revert permitirá a edição da mensagem do commit antes de fazer a reversão do commit. Esta é a predefinição caso execute o comando em um terminal.
-
-#### --abort
-#### Cancele a operação e retorne a condição pré-sequência.
 
 ### Referência
 #### [Documentação Git](https://git-scm.com/docs/git-revert/pt_BR)
