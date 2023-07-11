@@ -44,9 +44,51 @@ documentação da aula de Git parte 2, PDF disponibilizado no Tech Up Challenge
 
 ### Funcionamento
 
+#### O git cherry-pick funciona copiando o conteúdo do commit selecionado e aplicando-o ao branch atual. Ele cria um novo commit com as mesmas alterações do commit original, mas com um novo hash de commit.
+
+#### Dado um ou mais commits existentes, aplique a mudança que cada um introduz, registrando um novo commit para cada um. Isso requer que sua árvore de trabalho esteja limpa (sem modificações do commit HEAD).
+
+#### Quando não é óbvio como aplicar uma mudança, acontece o seguinte:
+1. A ramificação atual e HEADo ponteiro permanecem no último commit feito com sucesso.
+2. A CHERRY_PICK_HEADreferência é definida para apontar para o commit que introduziu a alteração que é difícil de aplicar.
+3. Os caminhos nos quais a alteração foi aplicada corretamente são atualizados no arquivo de índice e na sua árvore de trabalho.
+4. Para caminhos conflitantes, o arquivo de índice registra até três versões, conforme descrito na seção "TRUE MERGE" do git-merge[1] . Os arquivos da árvore de trabalho incluirão uma descrição do conflito entre colchetes pelos marcadores de conflito usuais <<<<<<<e >>>>>>>.
+5. Nenhuma outra modificação é feita.
+
 ### Sintaxe
 
+#### A sintaxe básica do comando git cherry-pick é a seguinte:
+```
+ git cherry-pick <commit>
+ ```
+ * <commit>: O hash do commit que você deseja aplicar.
+
+```
+ git cherry-pick [--edit] [-n] [-m <número-pai>] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>…​
+ ```
+ ```
+ git cherry-pick (--continue | --skip | --abort | --quit)
+ ```
+
 ### Aplicação
+
+#### git cherry-pick master
+##### Aplique a alteração introduzida pelo commit na ponta do branch master e crie um novo commit com esta alteração.
+
+#### git cherry-pick ..master
+#### git cherry-pick ^HEAD master
+##### Aplique as alterações introduzidas por todos os commits que são ancestrais do master, mas não do HEAD para produzir novos commits.
+
+#### git cherry-pick maint next ^master
+#### git cherry-pick maint master..next
+##### Aplique as alterações introduzidas por todos os commits que são ancestrais de maint ou next, mas não master ou qualquer um de seus ancestrais. Observe que o último não significa mainte tudo entre mastere next; especificamente, maintnão será usado se estiver incluído em master.
+
+#### git rev-list --reverse master -- README | git cherry-pick -n --stdin
+##### Aplique as alterações introduzidas por todos os commits no branch master que tocou em README na árvore de trabalho e no índice, para que o resultado possa ser inspecionado e transformado em um único novo commit, se adequado.
+
+### Referência
+#### [Documentação Git](https://git-scm.com/docs/git-cherry-pick)
 
 <br>
 
