@@ -9,7 +9,7 @@
 2. ### [git cherry pick](#git-cherry-pick-1)
     * [Funcionamento](#funcionamento-1)
     - [Sintaxe](#sintaxe-1)
-    - [Aplicação](#aplicac3a7c3a3o-1)
+    - [Aplicação](#aplicação-1)
 
 3. ### [git revert](#git-revert-1) 
     - [Funcionamento](#funcionamento-2)
