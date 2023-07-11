@@ -26,7 +26,7 @@
 
 ## git squash
 
-Mod
+<h1>git squash</h1>
 
 ### Funcionamento
 
