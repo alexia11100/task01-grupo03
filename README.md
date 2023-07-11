@@ -24,7 +24,7 @@
 
 ### Aplicação (Algumas opções)
 
-#### <commit>…​
+#### "commit"​
 #### Commits que serão revertidos.
 
 #### -e
@@ -35,7 +35,7 @@
 #### Cancele a operação e retorne a condição pré-sequência.
 
 ### Referência
-#### [Documentação Git] (https://git-scm.com/docs/git-revert/pt_BR)
+#### [Documentação Git](https://git-scm.com/docs/git-revert/pt_BR)
 ## git squash
 ### Funcionamento
 
