@@ -29,7 +29,7 @@
 Tem a função de integrar dois branchs em um, refazendo o histórico de commits, movendo de uma ramificação para outro ponto de uma árvore.
 
 ### Sintaxe
-git rebase <branch>
+git rebase <base>
 
 ### Aplicação
 git rebase main
