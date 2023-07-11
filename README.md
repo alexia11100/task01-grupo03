@@ -19,7 +19,7 @@
 4. ### [git squash](#git-squash-1)
     - [Funcionamento](#funcionamento-3)
     - [Sintaxe](#sintaxe-3)
-    - [Aplicação](#aplicac3a7c3a3o-2)
+    - [Aplicação](#aplicação-2)
 
 <br>
 
@@ -194,7 +194,7 @@ Após um tempo já desenvolvendo/construindo um recurso em uma ramificação, o 
 
 1. ```git rebase -i HEAD~2```
 
-2. ![Alt text](image.png)
+2. ![Alt text](menu_interativo_vim.png)
 
 3. pick 28ddeb6 <br>
   squash 28ddeb6
