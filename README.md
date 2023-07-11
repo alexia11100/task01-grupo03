@@ -26,6 +26,8 @@
 
 ## git squash
 
+Mod
+
 ### Funcionamento
 
 ### Sintaxe
