@@ -16,7 +16,7 @@
     - [Sintaxe](#sintaxe-2)
     - [Aplicação](#aplicação-algumas-opções)
 
-4. ### [git stash](#git-stash-1)
+4. ### [git squash](#git-squash-1)
     - [Funcionamento](#funcionamento-3)
     - [Sintaxe](#sintaxe-3)
     - [Aplicação](#aplicac3a7c3a3o-2)
